@@ -43,7 +43,7 @@ function Popular() {
     ;
 
   const Card = styled.div`
-  min-height:18rem;
+  min-height:12rem;
   border-radius: 2rem ;
   overflow: hidden;
   margin-left:1rem;
@@ -62,14 +62,14 @@ function Popular() {
     p {
       position:absolute;
       z-index:10;
-      left:50%;
+      left:52%;
       bottom:5%;
       transform:translate(-50%, 0%);
       color:white;
       width:100%;
       text-alight:center;
       font-weight:600;
-      font-size:1rem;
+      font-size:14px;
       height: 40%;
       display:flex;
       align-items: center;
@@ -95,7 +95,7 @@ function Popular() {
         </LoaderWrapper>
         :
         <Wrapper >
-          <h3>Popular Picks</h3>
+          <h3>Trending</h3>
           <Splide options={{
             perPage: 4,
             arrows: false,
