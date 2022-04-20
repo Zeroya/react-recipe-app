@@ -13,7 +13,7 @@ function App() {
         <Category />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/cuisine" element={<Cuisine />} />
+          <Route path="/cuisine/:type" element={<Cuisine />} />
         </Routes>
       </Router>
     </div>

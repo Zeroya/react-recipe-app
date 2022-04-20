@@ -1,47 +1,47 @@
 .black {
-  color:black !important ;
+  color: black !important;
 }
 
 .white {
-  color:white !important;
+  color: white !important;
 }
 
 
 @media (min-width: 1250px) and (max-width: 1380px) {
 
   .toggle {
-    min-height:16rem !important;
+    min-height: 16rem !important;
   }
 
- }
+}
 
- @media (min-width: 970px) and (max-width: 1250px) {
+@media (min-width: 970px) and (max-width: 1250px) {
 
   .toggle {
-    min-height:12rem !important;
+    min-height: 12rem !important;
   }
- }
+}
 
- @media (min-width: 860px) and (max-width: 970px) {
+@media (min-width: 860px) and (max-width: 970px) {
 
   .toggle {
-    min-height:8rem !important;
+    min-height: 8rem !important;
   }
 
   .toggle p {
-    font-size:10px !important;
+    font-size: 10px !important;
   }
 
- }
+}
 
- @media (min-width: 100px) and (max-width: 860px) {
+@media (min-width: 100px) and (max-width: 860px) {
 
   .toggle {
-    min-height:4rem !important;
+    min-height: 4rem !important;
   }
 
   .toggle p {
-    font-size:8px !important;
+    font-size: 8px !important;
   }
 
- }
+}

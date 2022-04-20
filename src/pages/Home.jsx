@@ -6,10 +6,10 @@ import Dessert from "../components/Desserts";
 
 function Home() {
   return (
-     <div>
-    <Veggie />
-    <Popular />
-    <Dessert />
+    <div>
+      <Veggie />
+      <Popular />
+      <Dessert />
     </div>
   )
 }

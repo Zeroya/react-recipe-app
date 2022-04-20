@@ -23,14 +23,14 @@ function Popular() {
       const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY1}&number=20`);
       const result = await api.json();
 
-      localStorage.setItem("popular" , JSON.stringify(result.recipes));
+      localStorage.setItem("popular", JSON.stringify(result.recipes));
 
       setPopular(result.recipes);
       console.log(result.recipes)
       if (result.recipes.length === 0) {
         const api2 = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY2}&number=20`);
         const result2 = await api2.json();
-        localStorage.setItem("popular" , JSON.stringify(result2.recipes));
+        localStorage.setItem("popular", JSON.stringify(result2.recipes));
         setPopular(result2.recipes);
 
       }
@@ -107,9 +107,9 @@ function Popular() {
               return (
                 <SplideSlide key={recipe.id}>
                   <Card className="toggle">
-                    <p className={`${recipe.image == undefined ? "black" : "white"} `}>
+                    <p className={`${recipe.image === undefined ? "black" : "white"} `}>
                       {recipe.title}</p>
-                    <img src={recipe.image == undefined ?
+                    <img src={recipe.image === undefined ?
                       "https://upload.wikimedia.org/wikipedia/commons/9/9a/%D0%9D%D0%B5%D1%82_%D1%84%D0%BE%D1%82%D0%BE.png"
                       : recipe.image} alt={recipe.title} />
                   </Card>
