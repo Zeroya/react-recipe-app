@@ -1,11 +1,12 @@
-import React , {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Searched = () => {
 
-const [searchedRecipes, setSearchedRecipes] = useState([]);
-let params = useParams();
+  const [searchedRecipes, setSearchedRecipes] = useState([]);
+  let params = useParams();
 
 
   const GetSearched = async (name) => {
@@ -14,9 +15,9 @@ let params = useParams();
     setSearchedRecipes(recipes.results);
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     GetSearched(params.searched);
-  },[params.searched])
+  }, [params.searched])
 
 
 
@@ -25,8 +26,10 @@ let params = useParams();
       {searchedRecipes.map((el) => {
         return (
           <Card key={el.id}>
-            <img src={el.image} alt='' />
-            <h4>{el.title}</h4>
+            <Link to={"/recipe/" + el.id}>
+              <img src={el.image} alt='' />
+              <h4>{el.title}</h4>
+            </Link>
           </Card>
         );
       }

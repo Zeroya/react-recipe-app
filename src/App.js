@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Cuisine from './pages/Cuisine';
 import Search from './components/Search';
 import Searched from './pages/Searched';
+import Recipe from './pages/Recipe';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/cuisine/:type" element={<Cuisine />} />
           <Route path="/searched/:searched" element={<Searched />} />
+          <Route path='/recipe/:name' element={<Recipe />}/>
         </Routes>
       </Router>
     </div>

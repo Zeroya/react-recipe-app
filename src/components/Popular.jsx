@@ -4,6 +4,7 @@ import Loader from './Loader/Loader';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import './Popular.css';
+import { Link } from 'react-router-dom';
 
 function Popular() {
 
@@ -107,11 +108,13 @@ function Popular() {
               return (
                 <SplideSlide key={recipe.id}>
                   <Card className="toggle">
-                    <p className={`${recipe.image === undefined ? "black" : "white"} `}>
-                      {recipe.title}</p>
-                    <img src={recipe.image === undefined ?
-                      "https://upload.wikimedia.org/wikipedia/commons/9/9a/%D0%9D%D0%B5%D1%82_%D1%84%D0%BE%D1%82%D0%BE.png"
-                      : recipe.image} alt={recipe.title} />
+                    <Link to={"/recipe/"+ recipe.id}>
+                      <p className={`${recipe.image === undefined ? "black" : "white"} `}>
+                        {recipe.title}</p>
+                      <img src={recipe.image === undefined ?
+                        "https://upload.wikimedia.org/wikipedia/commons/9/9a/%D0%9D%D0%B5%D1%82_%D1%84%D0%BE%D1%82%D0%BE.png"
+                        : recipe.image} alt={recipe.title} />
+                    </Link>
                   </Card>
                 </SplideSlide>
               )
